@@ -1,4 +1,4 @@
-# dictonary
+# Dictonary Application
 
 A new Flutter project.
 
