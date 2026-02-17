@@ -10,7 +10,7 @@ class Help extends StatefulWidget {
 }
 
 class _HelpState extends State<Help> {
-  final Uri _url = Uri(scheme: 'mailto', path: 'chandandas20314@gmail.com');
+  final Uri _url = Uri(scheme: 'mailto', path: 'chandanyt20314@gmail.com');
 
   Future<void> emailLauncher() async {
     try {
