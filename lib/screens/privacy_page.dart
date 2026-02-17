@@ -152,7 +152,7 @@ class _PrivacyState extends State<Privacy> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "chandandas20314@gmail.com",
+                              "chandanyt20314@gmail.com",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Color(0xFF145BEC),
@@ -174,5 +174,4 @@ class _PrivacyState extends State<Privacy> {
       ),
     );
   }
-
 }
