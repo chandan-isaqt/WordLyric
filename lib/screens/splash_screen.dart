@@ -114,7 +114,7 @@ class _SplashState extends State<Splash> {
 
                         secondRingColor:
                             Theme.of(context).brightness == Brightness.dark
-                            ? Color(0xFF0F1623)
+                            ? Color.fromARGB(255, 7, 38, 96)
                             : Colors.white,
                         thirdRingColor: Colors.blue,
                       ),
