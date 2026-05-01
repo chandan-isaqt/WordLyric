@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+
 
 class Aboutus extends StatefulWidget {
   const Aboutus({super.key});
@@ -9,13 +11,27 @@ class Aboutus extends StatefulWidget {
 }
 
 class _AboutusState extends State<Aboutus> {
+
+  String appVersion = "";
+
+  @override
+  void initState() {
+    super.initState();
+    getAppVersion();
+  }
+
+  Future<void> getAppVersion() async {
+    final info = await PackageInfo.fromPlatform();
+    setState(() {
+      appVersion = info.version;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: const Color(0xFF101623),
       appBar: AppBar(
         centerTitle: true,
-        // backgroundColor: const Color(0xFF101623),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.pop(context),
@@ -56,6 +72,8 @@ class _AboutusState extends State<Aboutus> {
                 ),
 
                 SizedBox(height: 15),
+
+                /// 🔹 VERSION CONTAINER (UI NOT CHANGED)
                 Container(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 15,
@@ -72,12 +90,16 @@ class _AboutusState extends State<Aboutus> {
                     children: [
                       Icon(Icons.circle, size: 10, color: Colors.green),
                       Text(
-                        " V2.01",
-                        style: GoogleFonts.poppins(color: Color(0xFF91A0B5)),
+                        appVersion.isNotEmpty ? " V$appVersion" : " ",
+                        style: GoogleFonts.poppins(
+                          color: Color(0xFF91A0B5),
+                        ),
                       ),
                     ],
                   ),
                 ),
+
+                // ---- REST OF YOUR CODE EXACTLY SAME ----
 
                 SizedBox(height: 30),
                 Align(

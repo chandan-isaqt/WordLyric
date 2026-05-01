@@ -89,14 +89,17 @@ class Getx extends GetxController {
   RxBool ischeckWordOfTheDay = true.obs;
   RxBool isDarkCheck = false.obs;
   RxBool isRating = false.obs;
-  RxString word = "".obs;
-  RxString meaning = "".obs;
-  RxString ipa = "".obs;
+  RxString word = "Encourage".obs;
+  RxString meaning =
+      "To mentally support; to motivate, give courage, hope or spirit.".obs;
+  RxString ipa = "/ɪnˈkʌɹɪdʒ/".obs;
   RxString partOfSpeech = "".obs;
   RxString date = "".obs;
   final db = DbHelper();
   RxInt countAmni = 0.obs;
   RxString timeLeft = ''.obs;
+
+  RxBool checkWordStatusCode=false.obs;
 
   void progressPercentage() {
     if (mainProgress2.value == 5) {
@@ -147,13 +150,11 @@ class Getx extends GetxController {
   Future<void> saveDailyGoalSave() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isdailyGoalSave', isdailyGoalSave.value);
-
   }
 
   Future<void> saveCountAmni() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setInt('countAmni', countAmni.value);
-
   }
 
   int lastCheckedMinute = -1;

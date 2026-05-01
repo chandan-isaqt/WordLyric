@@ -1,6 +1,7 @@
 // import 'dart:developer';
 // import 'package:dictonary/screens/homepage.dart';
 // import 'package:dictonary/api/wordofthedayApi/worddayApi.dart';
+
 import 'package:dictonary/controller/getx_controller.dart' show Getx;
 
 import 'package:dictonary/screens/traker_Daily_page.dart';
@@ -229,7 +230,9 @@ class _SearchscreenState extends State<Searchscreen> {
                                           Container(
                                             color: Color(0xFF5B6E90),
                                             child: Text(
-                                              "Word of the Day",
+                                              getx.checkWordStatusCode.value
+                                                  ? "Word of the Month"
+                                                  : "Word of the Day",
                                               style: GoogleFonts.poppins(
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.w700,
@@ -341,22 +344,33 @@ class _SearchscreenState extends State<Searchscreen> {
                                                   ),
                                                 );
                                               } else {
-                                                if (!Get.isSnackbarOpen) {
-                                                  Get.snackbar(
-                                                    "Oops!",
-                                                    "Word is not available yet!",
-                                                    snackPosition:
-                                                        SnackPosition.BOTTOM,
-                                                    backgroundColor:
-                                                        Colors.black87,
-                                                    colorText: Colors.white,
-                                                    margin: EdgeInsets.all(12),
-                                                    borderRadius: 8,
-                                                    duration: Duration(
-                                                      seconds: 1,
-                                                    ),
-                                                  );
-                                                }
+                                                Get.to(
+                                                  () => Worddetails(
+                                                    value: "encourage",
+                                                  ),
+                                                  transition: Transition
+                                                      .rightToLeftWithFade,
+                                                  duration: Duration(
+                                                    milliseconds: 300,
+                                                  ),
+                                                );
+
+                                                // if (!Get.isSnackbarOpen) {
+                                                //   Get.snackbar(
+                                                //     "Oops!",
+                                                //     "Word is not available yet!",
+                                                //     snackPosition:
+                                                //         SnackPosition.BOTTOM,
+                                                //     backgroundColor:
+                                                //         Colors.black87,
+                                                //     colorText: Colors.white,
+                                                //     margin: EdgeInsets.all(12),
+                                                //     borderRadius: 8,
+                                                //     duration: Duration(
+                                                //       seconds: 1,
+                                                //     ),
+                                                //   );
+                                                // }
                                               }
                                             },
                                             child: Row(

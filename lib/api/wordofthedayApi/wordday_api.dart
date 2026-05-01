@@ -18,6 +18,7 @@ Future<void> wordOfTheDayFun() async {
     final res = await http.get(Uri.parse(wordofthedayUrl.wordDayUrl));
 
     if (res.statusCode == 200) {
+      log("message");
       final data = json.decode(res.body);
 
       wordDay = data["word"] ?? "No word available today";
@@ -34,6 +35,7 @@ Future<void> wordOfTheDayFun() async {
       // log(getx.meaning.value);
     } else {
       log('Request failed');
+      getx.checkWordStatusCode.value = true;
     }
   } catch (e) {
     log("Error : $e");
