@@ -107,7 +107,7 @@ class _MaingameState extends State<Maingame> {
                   () => Text(
                     "${getx.questions[getx.currentQuestionIndex.value]['word']}",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                   ),
                 ),
               ),

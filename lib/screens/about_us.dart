@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
-
 class Aboutus extends StatefulWidget {
   const Aboutus({super.key});
 
@@ -11,7 +10,6 @@ class Aboutus extends StatefulWidget {
 }
 
 class _AboutusState extends State<Aboutus> {
-
   String appVersion = "";
 
   @override
@@ -23,7 +21,7 @@ class _AboutusState extends State<Aboutus> {
   Future<void> getAppVersion() async {
     final info = await PackageInfo.fromPlatform();
     setState(() {
-      appVersion = info.version;
+      appVersion = "${info.buildNumber}";
     });
   }
 
@@ -91,16 +89,13 @@ class _AboutusState extends State<Aboutus> {
                       Icon(Icons.circle, size: 10, color: Colors.green),
                       Text(
                         appVersion.isNotEmpty ? " V$appVersion" : " ",
-                        style: GoogleFonts.poppins(
-                          color: Color(0xFF91A0B5),
-                        ),
+                        style: GoogleFonts.poppins(color: Color(0xFF91A0B5)),
                       ),
                     ],
                   ),
                 ),
 
                 // ---- REST OF YOUR CODE EXACTLY SAME ----
-
                 SizedBox(height: 30),
                 Align(
                   alignment: Alignment.topLeft,
@@ -213,7 +208,7 @@ class _AboutusState extends State<Aboutus> {
                   child: Padding(
                     padding: const EdgeInsets.all(50.0),
                     child: Text(
-                      "© 2025 || Devloped by Chandan.",
+                      "© 2026 || Devloped by Chandan.",
                       style: GoogleFonts.poppins(
                         fontSize: 12,
                         color: Theme.of(context).brightness == Brightness.dark

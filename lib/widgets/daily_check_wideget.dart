@@ -65,7 +65,8 @@ class Dailyiteam extends StatelessWidget {
                         title,
                         style: TextStyle(
                           fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                          // fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           // color: Colors.black,
                         ),
                       ),

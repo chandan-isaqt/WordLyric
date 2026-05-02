@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTheme {
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
+    fontFamily: 'Roboto',
+    textTheme: GoogleFonts.robotoTextTheme(),
     scaffoldBackgroundColor: Color(0xFFF6F6F8),
     colorScheme: ColorScheme.light(
       secondary: const Color(0xFFF6F6F8),
@@ -44,13 +46,15 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: const Color(0xFF101623),
-
+    // 🔥 ADD
     // useMaterial3: false,
     colorScheme: ColorScheme.dark(
       secondary: Color(0xFF1F2838),
       primary: const Color.fromARGB(179, 199, 199, 199),
     ),
 
+    textTheme: GoogleFonts.robotoTextTheme(ThemeData.dark().textTheme),
+    fontFamily: 'Roboto',
     // =====
     dividerColor: Color.fromARGB(255, 59, 77, 105),
     appBarTheme: AppBarTheme(

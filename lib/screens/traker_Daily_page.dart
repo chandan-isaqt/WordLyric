@@ -141,7 +141,7 @@ class _DailyTrakerState extends State<DailyTraker> {
                               'Growth happens daily',
                               style: TextStyle(
                                 fontSize: 18,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
                                 // color: Colors.black,
                               ),
                             ),
@@ -186,7 +186,7 @@ class _DailyTrakerState extends State<DailyTraker> {
                         'Daily Quests',
                         style: TextStyle(
                           fontSize: 22,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           // color: Colors.black,
                         ),
                       ),
@@ -255,7 +255,7 @@ class _DailyTrakerState extends State<DailyTraker> {
                         'Daily Quiz',
                         style: TextStyle(
                           fontSize: 22,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                           // color: Colors.black,
                         ),
                       ),
@@ -340,7 +340,7 @@ class _DailyTrakerState extends State<DailyTraker> {
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 28,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                                 SizedBox(height: 4),
@@ -408,7 +408,7 @@ class _DailyTrakerState extends State<DailyTraker> {
                             style: TextStyle(
                               // color: Colors.black87,
                               fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                           SizedBox(height: 16),

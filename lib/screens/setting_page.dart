@@ -241,248 +241,229 @@ class _SettingState extends State<Setting> {
               ),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 14,
+                  InkWell(
+                    borderRadius: BorderRadius.circular(10),
+                    onTap: () {
+                      Get.to(
+                        () => Aboutus(),
+                        transition: Transition.rightToLeftWithFade,
+                        duration: Duration(milliseconds: 300),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 14,
+                      ),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: checkFinalDark
+                                ? Color(0xFF1C2D4D)
+                                : const Color(0xFFE7EEFD),
+                            radius: 18,
+                            child: Icon(
+                              Icons.info_outline,
+                              size: 20,
+                              color: Color(0xFF145BEC),
+                            ),
+                          ),
+                          SizedBox(width: 16),
+                          Text(
+                            "About Us",
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Spacer(),
+                          Icon(Icons.arrow_forward_ios_outlined),
+                        ],
+                      ),
                     ),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: checkFinalDark
-                              ? Color(0xFF1C2D4D)
-                              : const Color(0xFFE7EEFD),
-                          radius: 18,
-                          child: Icon(
-                            Icons.info_outline,
-                            size: 20,
-                            color: Color(0xFF145BEC),
+                  ),
+                  Divider(height: 1, color: Theme.of(context).dividerColor),
+                  InkWell(
+                    borderRadius: BorderRadius.circular(10),
+                    onTap: () {
+                      Get.to(
+                        () => Help(),
+                        transition: Transition.rightToLeftWithFade,
+                        duration: Duration(milliseconds: 300),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 14,
+                      ),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: checkFinalDark
+                                ? Color(0xFF1C2D4D)
+                                : const Color(0xFFE7EEFD),
+                            radius: 18,
+                            child: Icon(
+                              Icons.help_outline,
+                              size: 20,
+                              color: Color(0xFF145BEC),
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 16),
-                        Text(
-                          "About Us",
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            // color: Colors.white,
+                          SizedBox(width: 16),
+                          Text(
+                            "Help & Support",
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Get.to(
-                              () => Aboutus(),
-                              transition: Transition.rightToLeftWithFade,
-                              duration: Duration(milliseconds: 300),
-                            );
-                          },
-                          child: Icon(
-                            Icons.arrow_forward_ios_outlined,
-                            // color: const Color(0xFF778599),
-                          ),
-                        ),
-                      ],
+                          Spacer(),
+                          Icon(Icons.arrow_forward_ios_outlined),
+                        ],
+                      ),
                     ),
                   ),
                   Divider(height: 1, color: Theme.of(context).dividerColor),
 
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 14,
-                    ),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: checkFinalDark
-                              ? Color(0xFF1C2D4D)
-                              : const Color(0xFFE7EEFD),
-                          radius: 18,
-                          child: Icon(
-                            Icons.help_outline,
-                            size: 20,
-                            color: Color(0xFF145BEC),
+                  InkWell(
+                    borderRadius: BorderRadius.circular(10),
+                    onTap: () {
+                      Get.to(
+                        () => Privacy(),
+                        transition: Transition.rightToLeftWithFade,
+                        duration: Duration(milliseconds: 300),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 14,
+                      ),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: checkFinalDark
+                                ? Color(0xFF1C2D4D)
+                                : const Color(0xFFE7EEFD),
+                            radius: 18,
+                            child: Icon(
+                              Icons.privacy_tip_outlined,
+                              size: 20,
+                              color: Color(0xFF145BEC),
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 16),
-                        Text(
-                          "Help & Support",
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            // color: Colors.white,
+                          SizedBox(width: 16),
+                          Text(
+                            "Privacy Policy",
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Get.to(
-                              () => Help(),
-                              transition: Transition.rightToLeftWithFade,
-                              duration: Duration(milliseconds: 300),
-                            );
-                          },
-                          child: Icon(
-                            Icons.arrow_forward_ios_outlined,
-                            // color: const Color(0xFF778599),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Divider(height: 1, color: Theme.of(context).dividerColor),
-
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 14,
-                    ),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: checkFinalDark
-                              ? Color(0xFF1C2D4D)
-                              : const Color(0xFFE7EEFD),
-                          radius: 18,
-                          child: Icon(
-                            Icons.privacy_tip_outlined,
-                            size: 20,
-                            color: Color(0xFF145BEC),
-                          ),
-                        ),
-                        SizedBox(width: 16),
-                        Text(
-                          "Privacy Policy",
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            // color: Colors.white,
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            Get.to(
-                              () => Privacy(),
-                              transition: Transition.rightToLeftWithFade,
-                              duration: Duration(milliseconds: 300),
-                            );
-                          },
-                          child: Icon(
-                            Icons.arrow_forward_ios_outlined,
-                            // color: const Color(0xFF778599),
-                          ),
-                        ),
-                      ],
+                          Spacer(),
+                          Icon(Icons.arrow_forward_ios_outlined),
+                        ],
+                      ),
                     ),
                   ),
                   Divider(height: 1, color: Theme.of(context).dividerColor),
 
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 14,
-                    ),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
+                  InkWell(
+                    borderRadius: BorderRadius.circular(10),
+                    onTap: () {
+                      if (getx.isRating.value) {
+                        if (!Get.isSnackbarOpen) {
+                          Get.snackbar(
+                            "Oops! 😔",
+                            "You already submitted your rating.",
+                            snackPosition: SnackPosition.BOTTOM,
+                            backgroundColor: Color.fromARGB(255, 53, 62, 80),
+                            colorText: Colors.white,
+                            margin: EdgeInsets.all(10),
+                            borderRadius: 8,
+                            duration: Duration(seconds: 1),
+                          );
+                        }
+                      } else {
+                        Get.defaultDialog(
+                          title: "Rate App",
                           backgroundColor: checkFinalDark
-                              ? Color(0xFF1C2D4D)
-                              : const Color(0xFFE7EEFD),
-                          radius: 18,
-                          child: const Icon(
-                            Icons.star,
-                            size: 20,
-                            color: Color(0xFF145BEC),
-                          ),
-                        ),
-                        SizedBox(width: 16),
-                        Text(
-                          "Rate app",
-                          style: GoogleFonts.poppins(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            // color: Colors.white,
-                          ),
-                        ),
-                        Spacer(),
-                        InkWell(
-                          onTap: () {
-                            if (getx.isRating.value) {
-                              if (!Get.isSnackbarOpen) {
-                                Get.snackbar(
-                                  "Oops! 😔",
-                                  "You already submitted your rating.",
-                                  snackPosition: SnackPosition.BOTTOM,
-                                  backgroundColor: Color.fromARGB(
-                                    255,
-                                    53,
-                                    62,
-                                    80,
-                                  ),
-                                  colorText: Colors.white,
-                                  margin: EdgeInsets.all(10),
-                                  borderRadius: 8,
-                                  duration: Duration(seconds: 1),
-                                );
-                              }
-                            } else {
-                              Get.defaultDialog(
-                                title: "Rate App",
-                                backgroundColor: checkFinalDark
-                                    ? Color(0xFF1E293B)
-                                    : Color.fromARGB(255, 255, 255, 255),
-                                content: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text("How would you rate this app?"),
-                                    SizedBox(height: 10),
-                                    RatingBar.builder(
-                                      initialRating: 0,
-                                      minRating: 1,
-                                      direction: Axis.horizontal,
-                                      allowHalfRating: true,
-                                      itemCount: 5,
-                                      itemBuilder: (context, _) => const Icon(
-                                        Icons.star,
-                                        color: Colors.amber,
-                                      ),
-                                      onRatingUpdate: (rating) {
-                                        if (!getx.isRating.value) {
-                                          getx.isRating.value = true;
-                                          Get.back();
+                              ? Color(0xFF1E293B)
+                              : Color.fromARGB(255, 255, 255, 255),
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text("How would you rate this app?"),
+                              SizedBox(height: 10),
+                              RatingBar.builder(
+                                initialRating: 0,
+                                minRating: 1,
+                                direction: Axis.horizontal,
+                                allowHalfRating: true,
+                                itemCount: 5,
+                                itemBuilder: (context, _) =>
+                                    const Icon(Icons.star, color: Colors.amber),
+                                onRatingUpdate: (rating) {
+                                  if (!getx.isRating.value) {
+                                    getx.isRating.value = true;
+                                    Get.back();
 
-                                          if (!Get.isSnackbarOpen) {
-                                            Get.snackbar(
-                                              "Thank you! 🌟",
-                                              "Your rating has been recorded.",
-                                              snackPosition:
-                                                  SnackPosition.BOTTOM,
-                                              backgroundColor: Color.fromARGB(
-                                                255,
-                                                52,
-                                                102,
-                                                201,
-                                              ),
-                                              colorText: Colors.white,
-                                              margin: EdgeInsets.all(10),
-                                              borderRadius: 8,
-                                              duration: Duration(seconds: 1),
-                                            );
-                                          }
-                                        }
-                                      },
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }
-                          },
-                          child: const Icon(Icons.arrow_forward_ios_outlined),
-                        ),
-                      ],
+                                    if (!Get.isSnackbarOpen) {
+                                      Get.snackbar(
+                                        "Thank you! 🌟",
+                                        "Your rating has been recorded.",
+                                        snackPosition: SnackPosition.BOTTOM,
+                                        backgroundColor: Color.fromARGB(
+                                          255,
+                                          52,
+                                          102,
+                                          201,
+                                        ),
+                                        colorText: Colors.white,
+                                        margin: EdgeInsets.all(10),
+                                        borderRadius: 8,
+                                        duration: Duration(seconds: 1),
+                                      );
+                                    }
+                                  }
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+                      }
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 14,
+                      ),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: checkFinalDark
+                                ? Color(0xFF1C2D4D)
+                                : const Color(0xFFE7EEFD),
+                            radius: 18,
+                            child: const Icon(
+                              Icons.star,
+                              size: 20,
+                              color: Color(0xFF145BEC),
+                            ),
+                          ),
+                          SizedBox(width: 16),
+                          Text(
+                            "Rate app",
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Spacer(),
+                          Icon(Icons.arrow_forward_ios_outlined),
+                        ],
+                      ),
                     ),
                   ),
                 ],
