@@ -208,7 +208,7 @@ class _AboutusState extends State<Aboutus> {
                   child: Padding(
                     padding: const EdgeInsets.all(50.0),
                     child: Text(
-                      "© 2026 || Devloped by Chandan.",
+                      "© ${DateTime.now().year} || Devloped by Chandan.",
                       style: GoogleFonts.poppins(
                         fontSize: 12,
                         color: Theme.of(context).brightness == Brightness.dark

@@ -50,7 +50,7 @@ class _PrivacyState extends State<Privacy> {
           children: [
             Center(
               child: Text(
-                "LAST UPDATED: FEB 24, 2026",
+                "LAST UPDATED: MAY 04, 2026",
                 style: GoogleFonts.averiaLibre(
                   fontSize: 12,
                   color: const Color(0xFF748093),
